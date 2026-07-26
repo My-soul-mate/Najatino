@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>TO MY HAPPY SISTER NJAT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="bgLayer"></div>
+<div id="bgOverlay"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+<div id="confetti"></div>
+
+<audio id="bgMusic" src="music.mp3" loop></audio>
+
+<!-- شاشة التحميل -->
+<section id="preloader" class="screen">
+<div class="glass loader-glass">
+<div class="crown-icon">👑</div>
+<h1>TO MY HAPPY SISTER NJAT</h1>
+<p>هدية صغيرة لأميرة كبيرة 🎂</p>
+<div class="load-bar-wrap"><div class="load-bar-inner"></div></div>
+</div>
+</section>
+
+<!-- كلمة المرور -->
+<section id="passwordScreen" class="screen hidden">
+<div class="glass pw-glass">
+<span class="small-label">🎂 بوابة الاحتفال</span>
+<h1 class="pw-title">TO MY HAPPY SISTER NJAT</h1>
+<p class="lead">
+اليوم ليس يومًا عاديًا… اليوم نحتفل بميلاد أميرة اسمها نجاة،
+لتكتمل بها فرحة أيامنا.
+</p>
+<div class="hint-box">
+<strong>تلميح:</strong><br/>
+كلمة من 4 حروف، تمثل السند الأول لنا في الحياة،
+وأغلى رجل في قلوبنا.
+</div>
+<div class="pw-form">
+<input type="password" id="pwInput" placeholder="اكتبي كلمة المرور هنا"/>
+<button class="btn-gold" id="pwBtn">🎁 افتحي هديتكِ</button>
+</div>
+<p class="err" id="pwErr"></p>
+</div>
+</section>
+
+<!-- الموقع -->
+<div id="app" class="hidden">
+
+<header id="topbar">
+<div>
+<span class="brand-title">TO MY HAPPY SISTER NJAT</span>
+<span class="brand-sub">هدية من أخوكِ محمد أمين 💙</span>
+</div>
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#letter">رسالتي</a>
+<a href="#qualities">صفاتكِ</a>
+<a href="#cake">الكيكة</a>
+<a href="#giftbox">الهدية</a>
+<a href="#game">اللعبة</a>
+<a href="#languages">بكل اللغات</a>
+<a href="#poem">قصيدة</a>
+</nav>
+<button class="btn-outline" id="musicToggle">⏸ إيقاف</button>
+</header>
+
+<main>
+
+<!-- الرئيسية -->
+<section id="home" class="section">
+<div class="sec-card glass">
+<div class="hero-grid">
+<div>
+<span class="small-label">🎂 18 / 07 / 2000</span>
+<h1>اليوم نحتفل بميلاد أميرة اسمها نجاة</h1>
+<p>
+لتكتمل بها فرحة أيامنا، ولأن وجودكِ في حياتنا هو أجمل هدية
+منحها لنا الله.
+</p>
+<div class="counter-box">
+<span>🎂 26 سنة من الجمال والفرح</span>
+<strong id="ageCounter">26 سنة</strong>
+<small>منذ 18 / 07 / 2000</small>
+</div>
+</div>
+<div class="heart-wrap">
+<div class="heart-sis"><span>نجاة<br/>👑</span></div>
+<p class="heart-caption">أميرة البيت 💙</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- رسالة -->
+<section id="letter" class="section">
+<div class="sec-card glass">
+<h2>رسالة إلى أختي نجاة 💌</h2>
+<p class="sec-note">من أخوكِ محمد أمين</p>
+<div class="letter-box">
+<p>إلى أختي، وقطعة من روحي، نجاة…</p>
+<p>اليوم لا نحتفل فقط بيوم ميلادكِ، بل نحتفل باليوم الذي أشرقت فيه حياتنا بوجودكِ.</p>
+<p>أنتِ لستِ مجرد أخت، أنتِ السند القوي، والقلب الصافي الذي نلجأ إليه دائمًا.</p>
+<p>شكرًا لأنكِ أنتِ، بشجاعتكِ، بطيبتكِ، وبكل تفاصيلكِ الجميلة التي تجعل حياتنا أسهل وأسعد.</p>
+<p>كل عام وأنتِ الأجمل، والأقوى، والأنقى. كل عام وأنتِ فرحة هذا البيت يا نجاة. 💙</p>
+</div>
+</div>
+</section>
+
+<!-- صفات -->
+<section id="qualities" class="section">
+<div class="sec-card glass">
+<h2>صفات أميرة البيت 👑</h2>
+<p class="sec-note">اضغطي على كل بطاقة لتظهر صفة من صفاتكِ</p>
+<div class="qualities-grid" id="qualitiesGrid"></div>
+</div>
+</section>
+
+<!-- الكيكة -->
+<section id="cake" class="section">
+<div class="sec-card glass">
+<h2>كيكة عيد ميلادكِ 🎂</h2>
+<p class="sec-note">اضغطي على الشموع لإطفائها واكتشفي المفاجآت</p>
+<div class="cake-area">
+<div class="cake-top">
+<div class="candle-big" id="candle1">
+<span class="cb-flame"></span>
+<span class="cb-body">2</span>
+</div>
+<div class="candle-big" id="candle2">
+<span class="cb-flame"></span>
+<span class="cb-body">6</span>
+</div>
+</div>
+<div class="cake-base">
+<div class="cake-layer l1"></div>
+<div class="cake-layer l2"></div>
+<div class="cake-layer l3"></div>
+<span class="cake-text">Happy Birthday نجاة 🎂</span>
+</div>
+</div>
+<div class="surprise-msg hidden" id="surpriseMsg"></div>
+<div class="surprise-counter" id="surpriseCounter"></div>
+</div>
+</section>
+
+<!-- صندوق الهدية -->
+<section id="giftbox" class="section">
+<div class="sec-card glass">
+<h2>صندوق هدية نجاة 🎁</h2>
+<p class="sec-note">اضغطي على الصندوق ليفتح لكِ قلبه</p>
+<div class="gift-area">
+<div class="gift-box" id="giftBox">
+<div class="g-lid"></div>
+<div class="g-body"></div>
+<div class="g-rv"></div>
+<div class="g-rh"></div>
+</div>
+<div class="gift-msg hidden" id="giftMsg">
+<h3>نجاة 👑</h3>
+<div class="mini-crown">👑</div>
+<p>
+كل عام وأنتِ ملكة هذا البيت،<br/>
+وأجمل أخت في الدنيا،<br/>
+وأغلى هدية منحني إياها الله.<br/>
+عيد ميلاد سعيد يا أميرة! 🎂💙
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- اللعبة -->
+<section id="game" class="section">
+<div class="sec-card glass">
+<h2>لعبة جمع الهدايا 🎁</h2>
+<p class="sec-note">اجمعي 10 هدايا في 15 ثانية لتصبحي ملكة عيد الميلاد!</p>
+<div class="game-top">
+<button class="btn-gold" id="startGame">🎮 ابدئي اللعبة</button>
+<div class="game-info">
+<span id="gTimer">⏱ 15</span>
+<span id="gScore">🎁 0 / 10</span>
+</div>
+</div>
+<div class="game-area" id="gameArea"></div>
+<p class="game-msg" id="gameMsg"></p>
+</div>
+</section>
+
+<!-- بكل اللغات -->
+<section id="languages" class="section">
+<div class="sec-card glass">
+<h2>عيد ميلاد سعيد بكل اللغات 🌍</h2>
+<p class="sec-note">العالم كله يقول لكِ: كل عام وأنتِ بخير يا نجاة</p>
+<div class="lang-grid" id="langGrid"></div>
+</div>
+</section>
+
+<!-- قصيدة -->
+<section id="poem" class="section">
+<div class="sec-card glass">
+<h2>قصيدة لأختي نجاة 📜</h2>
+<div class="poem-box">
+<p>
+يا أختي يا أجمل هدية من السماء،<br/>
+وجودكِ في حياتي نور وضياء.<br/>
+قوية كالجبال، وقلبكِ صافي كالماء،<br/>
+كل عام وأنتِ تاج فوق الرؤوس والأسماء.<br/><br/>
+شجاعتكِ تلهمني، وطيبتكِ تسعدني،<br/>
+وحنانكِ يا نجاة دائمًا يحتويني ويسندني.<br/>
+ما أجمل الحياة حين تكونين بها،<br/>
+وما أحلى العيد حين يكون عيدكِ يا أختاه.<br/><br/>
+كل عام وأنتِ بخير يا أميرة،<br/>
+من أخوكِ اللي يحبكِ كثير... محمد أمين. 💙
+</p>
+</div>
+</div>
+</section>
+
+<!-- الخاتمة -->
+<section id="finale" class="section">
+<div class="sec-card glass finale-card">
+<div class="finale-crown">👑</div>
+<h2>كل عام وأنتِ بخير يا نجاة 🎂</h2>
+<p class="finale-text">
+كل عام وأنتِ الفرحة، والقوة، والجمال.<br/>
+كل عام وأنتِ أميرة هذا البيت.<br/>
+وكل عام وأنتِ في قلبي أغلى ما أملك.<br/><br/>
+<strong>من أخوكِ محمد أمين 💙👑</strong>
+</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>صُنع بكل حب من أخوكِ محمد أمين 💙</p>
+<p>لأنكِ تستحقين أكثر من مجرد كلمات 👑🎂</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+  </html>
